@@ -38,7 +38,11 @@
     </dependency>
   </dependencies>
 
+<<<<<<< HEAD
   <build>
+=======
+ <build>
+>>>>>>> 5c46ec7188cf6460d101f052859865e47385170c
   <finalName>my-insure</finalName>
     <pluginManagement><!-- lock down plugins versions to avoid using Maven defaults (may be moved to parent pom) -->
       <plugins>

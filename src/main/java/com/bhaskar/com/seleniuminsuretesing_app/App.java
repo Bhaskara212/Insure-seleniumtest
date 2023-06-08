@@ -30,8 +30,8 @@ public class App
         System.out.println("Selenium Test Scripts Execution Started..");
        
          driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
-         //driver.manage().timeouts().pageLoadTimeout(100, TimeUnit.SECONDS);
-         //driver.manage().window().maximize();
+         driver.manage().timeouts().pageLoadTimeout(100, TimeUnit.SECONDS);
+         driver.manage().window().maximize();
          driver.get("http://54.86.76.220:8081/contact.html");
          
          
@@ -52,13 +52,13 @@ public class App
          Thread.sleep(2000);
          
          
-        // TakesScreenshot scrShot = ((TakesScreenshot)driver);
-         //File srcFile = scrShot.getScreenshotAs(OutputType.FILE);
-         //File destFile = new File("screenshot.png");
-         //FileUtils.copyFile(srcFile, destFile);
-         //System.out.println("reports stored at : " + destFile.getAbsolutePath().toString());
+        TakesScreenshot scrShot = ((TakesScreenshot)driver);
+         File srcFile = scrShot.getScreenshotAs(OutputType.FILE);
+         File destFile = new File("screenshot.png");
+         FileUtils.copyFile(srcFile, destFile);
+         System.out.println("reports stored at : " + destFile.getAbsolutePath().toString());
          Thread.sleep(7000);
          driver.quit();
-        // System.out.println("Script executed successfully");
+         System.out.println("Script executed successfully");
     }
 }
